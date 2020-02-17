@@ -1,0 +1,16 @@
+{
+  "name": "remote",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main/index.js",
+  "scripts": {
+    "start:main": "electron .",
+    "start:render": "cd renderer/src/main && npm start",
+    "start": "concurrently \"npm run start:main\" \"wait-on http://localhost:3000/ && npm run start:render\" ",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {}
+}
